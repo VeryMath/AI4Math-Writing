@@ -12,6 +12,11 @@
 
 </div>
 
+<p align="center">
+  如果这个项目对你有帮助，欢迎为仓库点 Star ⭐
+  <a href="https://github.com/VeryMath/AI4Math-Paper-Writing"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/VeryMath/AI4Math-Paper-Writing?style=social"></a>
+</p>
+
 ## 这个仓库是什么
 
 这个仓库是 AI4Math 论文写作方向的技能入口。它不替代来源证据、证明检查或实验验证；它提供的是一个让 coding agent 基于已给材料起草、修改和审查数学论文文本的结构化 workflow。

@@ -13,6 +13,11 @@ review, and submission-ready LaTeX checks.
 
 </div>
 
+<p align="center">
+  If this project helps your work, please consider giving the repository a Star ⭐
+  <a href="https://github.com/VeryMath/AI4Math-Paper-Writing"><img alt="GitHub stars" src="https://img.shields.io/github/stars/VeryMath/AI4Math-Paper-Writing?style=social"></a>
+</p>
+
 ## What This Repository Is
 
 This repository is the AI4Math home for mathematical paper-writing skills. It
