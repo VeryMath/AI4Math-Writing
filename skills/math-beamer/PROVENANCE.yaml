@@ -1,0 +1,12 @@
+schema_version: 1
+course:
+  id: 2026-summer-ai-research-practice-math
+  name_zh: 人工智能赋能科研实践（数学）
+contributor:
+  display_name: Conan Xu
+source:
+  submission_id: course-2026-math-beamer
+  sha256: 86507c9a966f6df28dc481b7ddc9879017a64078939e1d38c1f94f04508e765a
+license: MIT
+license_decision: course-maintainer-approved
+normalization_record: NORMALIZATION.md
