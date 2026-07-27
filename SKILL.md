@@ -1,9 +1,9 @@
 ---
-name: ai4math-paper-writing
-description: Route AI4Math mathematical paper-writing tasks to the bundled paper-writing skill package.
+name: ai4math-writing
+description: Route AI4Math mathematical writing and presentation tasks to the bundled skill packages.
 ---
 
-# AI4Math Paper Writing
+# AI4Math Writing
 
 Use this repository as a routing layer for source-grounded mathematical paper
 writing workflows.
