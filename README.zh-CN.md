@@ -7,7 +7,7 @@
 [English](README.md) · [贡献者](CONTRIBUTORS.md) · [技能包](#技能包) · [安装](#安装) · [快速开始](#快速开始) · [安全边界](#安全边界)
 
 ![version](https://img.shields.io/badge/version-0.1.0-blue)
-![skills](https://img.shields.io/badge/skills-1-2ea44f)
+![skills](https://img.shields.io/badge/skills-2-2ea44f)
 ![license](https://img.shields.io/badge/license-MIT-green)
 
 </div>
@@ -28,6 +28,7 @@
 | 包 | 适用任务 | 入口 |
 | --- | --- | --- |
 | [`paper-writing`](skills/paper-writing/) | 基于已提供来源起草、修改、组织和审查数学论文，包括 claim-evidence 审查、证明义务检查、符号一致性、公式可读性和 LaTeX 投稿预检。 | [`README`](skills/paper-writing/README.md) · [`SKILL`](skills/paper-writing/SKILL.md) |
+| [`math-beamer`](skills/math-beamer/) | 生成来源可追溯的数学 Beamer，选择可审计模板，编译并检查版式，维护 slide-to-source ledger。 | [`README`](skills/math-beamer/README.zh-CN.md) · [`SKILL`](skills/math-beamer/SKILL.md) · [`预览`](skills/math-beamer/templates/preview-gallery.md) |
 
 ## 安装
 
@@ -40,6 +41,7 @@
 分支：main
 Skill 路径：
 - skills/paper-writing
+- skills/math-beamer
 
 请执行：
 1. 本地 clone 或更新仓库。
@@ -57,6 +59,7 @@ git clone https://github.com/VeryMath/AI4Math-Paper-Writing.git
 cd AI4Math-Paper-Writing
 mkdir -p ~/.codex/skills
 ln -s "$PWD/skills/paper-writing" ~/.codex/skills/paper-writing
+ln -s "$PWD/skills/math-beamer" ~/.codex/skills/math-beamer
 ```
 
 如果你的 agent 使用别的本地 Skill 目录，把 `~/.codex/skills` 替换成对应配置路径。
@@ -76,6 +79,12 @@ cd AI4Math-Paper-Writing
 skills/paper-writing/SKILL.md
 ```
 
+数学报告从这里开始：
+
+```text
+skills/math-beamer/SKILL.md
+```
+
 ## 仓库结构
 
 ```text
@@ -84,15 +93,19 @@ AI4Math-Paper-Writing/
 ├── README.zh-CN.md
 ├── SKILL.md
 └── skills/
-    └── paper-writing/
-        ├── SKILL.md
-        ├── skills/
-        └── templates/
+    ├── paper-writing/
+    └── math-beamer/
 ```
 
 ## 验证
 
-这个仓库没有根级构建步骤。修改技能包后，请检查 `SKILL.md`、README 链接、模板和包内说明。
+运行：
+
+```bash
+python3 -m unittest discover -s tests -v
+```
+
+修改模板时，还要使用各 `template.yaml` 声明的引擎编译受影响的 starter packs。
 
 ## 安全边界
 

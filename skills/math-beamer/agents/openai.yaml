@@ -1,0 +1,3 @@
+display_name: Math Beamer
+short_description: Create and audit source-grounded mathematical Beamer decks with curated templates and build checks.
+default_prompt: Use this skill to select a mathematical Beamer template, preserve theorem and source evidence, draft or revise the deck, run an approved LaTeX build, and report layout plus mathematical risks.

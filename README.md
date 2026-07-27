@@ -8,7 +8,7 @@ review, and submission-ready LaTeX checks.
 [中文说明](README.zh-CN.md) · [Contributors](CONTRIBUTORS.md) · [Skill packages](#skill-packages) · [Installation](#installation) · [Quick start](#quick-start) · [Security model](#security-and-scope)
 
 ![version](https://img.shields.io/badge/version-0.1.0-blue)
-![skills](https://img.shields.io/badge/skills-1-2ea44f)
+![skills](https://img.shields.io/badge/skills-2-2ea44f)
 ![license](https://img.shields.io/badge/license-MIT-green)
 
 </div>
@@ -33,6 +33,7 @@ Use the root page as the public map, then open the package-local README and
 | Package | Use it for | Start here |
 | --- | --- | --- |
 | [`paper-writing`](skills/paper-writing/) | Draft, revise, structure, and audit mathematical papers from supplied sources, including claim-evidence review, proof-obligation checks, notation checks, formula readability, and LaTeX preflight. | [`README`](skills/paper-writing/README.md) · [`SKILL`](skills/paper-writing/SKILL.md) |
+| [`math-beamer`](skills/math-beamer/) | Build source-grounded mathematical Beamer decks, choose auditable templates, compile them, inspect layout, and maintain a slide-to-source ledger. | [`README`](skills/math-beamer/README.md) · [`SKILL`](skills/math-beamer/SKILL.md) · [`gallery`](skills/math-beamer/templates/preview-gallery.md) |
 
 ## Installation
 
@@ -47,6 +48,7 @@ Repository: https://github.com/VeryMath/AI4Math-Paper-Writing.git
 Branch: main
 Skill paths:
 - skills/paper-writing
+- skills/math-beamer
 
 Steps:
 1. Clone or update the repository locally.
@@ -64,6 +66,7 @@ git clone https://github.com/VeryMath/AI4Math-Paper-Writing.git
 cd AI4Math-Paper-Writing
 mkdir -p ~/.codex/skills
 ln -s "$PWD/skills/paper-writing" ~/.codex/skills/paper-writing
+ln -s "$PWD/skills/math-beamer" ~/.codex/skills/math-beamer
 ```
 
 If your agent uses a different local Skill directory, replace `~/.codex/skills`
@@ -84,6 +87,12 @@ Start with:
 skills/paper-writing/SKILL.md
 ```
 
+For mathematical presentations, start with:
+
+```text
+skills/math-beamer/SKILL.md
+```
+
 ## Repository Layout
 
 ```text
@@ -92,16 +101,20 @@ AI4Math-Paper-Writing/
 ├── README.zh-CN.md
 ├── SKILL.md
 └── skills/
-    └── paper-writing/
-        ├── SKILL.md
-        ├── skills/
-        └── templates/
+    ├── paper-writing/
+    └── math-beamer/
 ```
 
 ## Validation
 
-There is no root build step. When changing the package, validate its
-`SKILL.md`, README links, templates, and any package-local instructions.
+Run:
+
+```bash
+python3 -m unittest discover -s tests -v
+```
+
+For template changes, also compile the affected starter packs with the engine
+declared in each `template.yaml`.
 
 ## Security and Scope
 
