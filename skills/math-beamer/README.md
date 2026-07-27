@@ -57,7 +57,7 @@ The shared workflow lives in:
 Copy this to your coding agent:
 
 ```text
-Please install the `math-beamer` skill from https://github.com/VeryMath/AI4Math-Paper-Writing.git (branch: main). Read the package README and SKILL.md, install the declared Skill entrypoint `math-beamer`, verify that `$math-beamer` is discoverable, and tell me whether I need to restart the agent.
+Please install the `math-beamer` skill from https://github.com/VeryMath/AI4Math-Writing.git (branch: main). Read the package README and SKILL.md, install the declared Skill entrypoint `math-beamer`, verify that `$math-beamer` is discoverable, and tell me whether I need to restart the agent.
 ```
 
 If this package is used from the AI4Math Skill Library mirror, install the
@@ -180,7 +180,7 @@ absolute paths.
 
 ## Maintainer Checks
 
-Run from the `AI4Math-Paper-Writing` repository root:
+Run from the `AI4Math-Writing` repository root:
 
 ```bash
 python3 -m unittest discover -s tests -v

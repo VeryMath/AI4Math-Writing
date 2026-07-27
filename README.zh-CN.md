@@ -1,6 +1,6 @@
 <div align="center">
 
-# AI4Math · 论文写作
+# AI4Math · 写作
 
 面向数学论文起草、证明义务审查与 LaTeX 投稿就绪检查的来源证据驱动工作流。
 
@@ -14,7 +14,7 @@
 
 <p align="center">
   如果这个项目对你有帮助，欢迎为仓库点 Star ⭐
-  <a href="https://github.com/VeryMath/AI4Math-Paper-Writing"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/VeryMath/AI4Math-Paper-Writing?style=social"></a>
+  <a href="https://github.com/VeryMath/AI4Math-Writing"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/VeryMath/AI4Math-Writing?style=social"></a>
 </p>
 
 ## 这个仓库是什么
@@ -37,7 +37,7 @@
 ```text
 请帮我安装这个 AI4Math Skill。
 
-仓库：https://github.com/VeryMath/AI4Math-Paper-Writing.git
+仓库：https://github.com/VeryMath/AI4Math-Writing.git
 分支：main
 Skill 路径：
 - skills/paper-writing
@@ -55,8 +55,8 @@ Skill 路径：
 Codex 风格本地 discovery 的手工 fallback：
 
 ```bash
-git clone https://github.com/VeryMath/AI4Math-Paper-Writing.git
-cd AI4Math-Paper-Writing
+git clone https://github.com/VeryMath/AI4Math-Writing.git
+cd AI4Math-Writing
 mkdir -p ~/.codex/skills
 ln -s "$PWD/skills/paper-writing" ~/.codex/skills/paper-writing
 ln -s "$PWD/skills/math-beamer" ~/.codex/skills/math-beamer
@@ -69,8 +69,8 @@ ln -s "$PWD/skills/math-beamer" ~/.codex/skills/math-beamer
 克隆仓库并打开技能包：
 
 ```bash
-git clone https://github.com/VeryMath/AI4Math-Paper-Writing.git
-cd AI4Math-Paper-Writing
+git clone https://github.com/VeryMath/AI4Math-Writing.git
+cd AI4Math-Writing
 ```
 
 从这里开始：
@@ -88,7 +88,7 @@ skills/math-beamer/SKILL.md
 ## 仓库结构
 
 ```text
-AI4Math-Paper-Writing/
+AI4Math-Writing/
 ├── README.md
 ├── README.zh-CN.md
 ├── SKILL.md

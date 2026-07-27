@@ -1,6 +1,6 @@
 <div align="center">
 
-# AI4Math · Paper Writing
+# AI4Math · Writing
 
 Source-grounded workflows for mathematical paper drafting, proof-obligation
 review, and submission-ready LaTeX checks.
@@ -15,7 +15,7 @@ review, and submission-ready LaTeX checks.
 
 <p align="center">
   If this project helps your work, please consider giving the repository a Star ⭐
-  <a href="https://github.com/VeryMath/AI4Math-Paper-Writing"><img alt="GitHub stars" src="https://img.shields.io/github/stars/VeryMath/AI4Math-Paper-Writing?style=social"></a>
+  <a href="https://github.com/VeryMath/AI4Math-Writing"><img alt="GitHub stars" src="https://img.shields.io/github/stars/VeryMath/AI4Math-Writing?style=social"></a>
 </p>
 
 ## What This Repository Is
@@ -44,7 +44,7 @@ and verify discovery.
 ```text
 Please install this AI4Math Skill for me.
 
-Repository: https://github.com/VeryMath/AI4Math-Paper-Writing.git
+Repository: https://github.com/VeryMath/AI4Math-Writing.git
 Branch: main
 Skill paths:
 - skills/paper-writing
@@ -62,8 +62,8 @@ Steps:
 Manual fallback for Codex-style local discovery:
 
 ```bash
-git clone https://github.com/VeryMath/AI4Math-Paper-Writing.git
-cd AI4Math-Paper-Writing
+git clone https://github.com/VeryMath/AI4Math-Writing.git
+cd AI4Math-Writing
 mkdir -p ~/.codex/skills
 ln -s "$PWD/skills/paper-writing" ~/.codex/skills/paper-writing
 ln -s "$PWD/skills/math-beamer" ~/.codex/skills/math-beamer
@@ -77,8 +77,8 @@ with that configured path.
 Clone the repository and open the package:
 
 ```bash
-git clone https://github.com/VeryMath/AI4Math-Paper-Writing.git
-cd AI4Math-Paper-Writing
+git clone https://github.com/VeryMath/AI4Math-Writing.git
+cd AI4Math-Writing
 ```
 
 Start with:
@@ -96,7 +96,7 @@ skills/math-beamer/SKILL.md
 ## Repository Layout
 
 ```text
-AI4Math-Paper-Writing/
+AI4Math-Writing/
 ├── README.md
 ├── README.zh-CN.md
 ├── SKILL.md

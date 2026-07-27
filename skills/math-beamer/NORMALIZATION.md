@@ -8,7 +8,7 @@ Public-release changes:
 
 - added package provenance and this normalization record;
 - updated maintainer checks to run from the canonical
-  `AI4Math-Paper-Writing` repository;
+  `AI4Math-Writing` repository;
 - recorded the contributor using the course-wide English-name convention.
 
 The package does not vendor third-party institutional templates, logos, fonts,

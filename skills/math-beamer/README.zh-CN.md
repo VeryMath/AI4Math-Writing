@@ -50,7 +50,7 @@ agent 应产出 Beamer source tree、可选 PDF、build/layout report、
 ```text
 请帮我安装 `math-beamer` skill。
 
-仓库：https://github.com/VeryMath/AI4Math-Paper-Writing.git
+仓库：https://github.com/VeryMath/AI4Math-Writing.git
 分支：main
 Skill 路径：math-beamer
 
@@ -171,7 +171,7 @@ python3 -m pip install -r requirements-preview.txt
 
 ## 维护检查
 
-在 `AI4Math-Paper-Writing` 仓库根目录运行：
+在 `AI4Math-Writing` 仓库根目录运行：
 
 ```bash
 python3 -m unittest discover -s tests -v
