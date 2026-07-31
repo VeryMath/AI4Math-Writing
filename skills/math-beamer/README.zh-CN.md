@@ -79,14 +79,26 @@ Target:
 
 Constraints:
 - 先 inspect；
-- 起草前先查看预览图库，再选择模板和 slide budget；
+- 使用逐步引导模式，并在每个 checkpoint 停下；
+- 展示两到三个带封面和内容页预览的模板候选，等待我选择；
+- 大纲和编译样张都经我确认后，才能制作完整 deck；
 - 编译或使用机构品牌前先询问；
 - 保留 slide-source ledger。
 ```
 
 ## 如何交互
 
-常用 checkpoint：
+默认采用逐步引导模式。agent 每次只完成一个阶段，并在四个强制关卡停下：
+
+| 关卡 | agent 展示 | 用户决定 |
+| --- | --- | --- |
+| 需求确认 | 听众、语言、时长、用途、来源和输出形式 | 确认或修改需求 |
+| 风格选择 | 两到三个带封面和内容页预览的模板 | 选择或调整风格 |
+| 大纲确认 | 报告主线、章节结构和逐页预算 | 确认或修改大纲 |
+| 样张确认 | 一到两页真实编译的代表性页面 | 确认或修改视觉方向 |
+
+只有这些关卡被确认或明确跳过后，才能开始完整 deck。常用 checkpoint
+响应为：
 
 | 决策词 | 含义 |
 | --- | --- |
@@ -99,21 +111,24 @@ Constraints:
 建议第一次这样开始：
 
 ```text
-First inspect the source packet and template catalog only. Then tell me:
-1. which Beamer workflow applies;
-2. which template you recommend;
-3. which files or commands you would use;
-4. what checkpoint needs my approve / revise / reject / skip decision.
+Use guided mode. First inspect the source packet only. Then tell me:
+1. 当前有哪些来源、还缺哪些材料；
+2. 适用哪类数学报告；
+3. 需求确认阶段需要我决定什么；
+4. 当前 checkpoint，以及确认后会发生什么。
+
+暂时不要选择最终模板，也不要生成完整大纲。
 ```
 
 ## Workflow And Outputs
 
 ```text
 source packet
-  -> 数学类型和听众分析
-  -> 模板选择
-  -> talk thesis 和 section map
-  -> 代表性样张
+  -> 来源检查
+  -> 需求确认关卡
+  -> 带预览的风格选择关卡
+  -> 大纲和 slide budget 确认关卡
+  -> 编译样张确认关卡
   -> 完整 deck
   -> latexmk 编译
   -> PDF/log/source audit

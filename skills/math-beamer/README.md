@@ -82,14 +82,27 @@ Target:
 
 Constraints:
 - inspect first;
-- inspect the visual gallery, then choose a template and slide budget before drafting;
+- use guided mode and stop at every checkpoint;
+- show two or three visual template candidates and wait for my choice;
+- wait for outline approval and compiled sample approval before the full deck;
 - ask before compiling or using institutional branding;
 - keep a slide-source ledger.
 ```
 
 ## How To Interact
 
-Use the normal checkpoint loop:
+The default interaction is guided. The agent must complete one stage at a time
+and stop at four mandatory checkpoints:
+
+| Gate | Agent presents | User decides |
+| --- | --- | --- |
+| Brief | audience, language, duration, purpose, source, output | approve or revise the brief |
+| Style | two or three templates with cover and content previews | choose or revise the style |
+| Outline | talk thesis, section map, and slide budget | approve or revise the outline |
+| Sample | one or two compiled representative frames | approve or revise the visual direction |
+
+The full deck starts only after these gates are approved or explicitly
+skipped. Use the checkpoint responses:
 
 | Decision | Meaning |
 | --- | --- |
@@ -102,21 +115,24 @@ Use the normal checkpoint loop:
 Recommended first interaction:
 
 ```text
-First inspect the source packet and template catalog only. Then tell me:
-1. which Beamer workflow applies;
-2. which template you recommend;
-3. which files or commands you would use;
-4. what checkpoint needs my approve / revise / reject / skip decision.
+Use guided mode. First inspect the source packet only. Then tell me:
+1. what sources are present or missing;
+2. which mathematical genre applies;
+3. which brief decisions you need from me;
+4. the current checkpoint and what happens after approval.
+
+Do not choose the final template or generate the full outline yet.
 ```
 
 ## Workflow And Outputs
 
 ```text
 source packet
-  -> genre and audience analysis
-  -> template selection
-  -> talk thesis and section map
-  -> representative sample frames
+  -> source intake
+  -> brief gate
+  -> style gate with previews
+  -> outline gate and slide budget
+  -> compiled sample gate
   -> full deck
   -> latexmk build
   -> PDF/log/source audit
