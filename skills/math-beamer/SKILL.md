@@ -39,6 +39,51 @@ license and logo rights.
 If the source packet is missing, produce a source request or an outline of
 needed evidence. Do not produce a full deck with unsupported claims.
 
+## Guided Interaction Contract
+
+Default to guided mode unless the user explicitly requests autonomous
+execution or has already supplied an approved brief, template, outline, and
+sample direction.
+
+- Work on one stage at a time. Ask only for decisions needed by the current
+  stage.
+- End every guided response with a checkpoint containing:
+  - current stage;
+  - what was completed;
+  - the decision needed from the user;
+  - available responses: `approve`, `revise`, `reject`, `skip`, or `stop`;
+  - what will happen after approval.
+- Do not interpret silence, a new attachment, or a general acknowledgement as
+  approval for a later stage.
+- A user may combine stages only by explicitly providing the decisions for
+  each skipped checkpoint.
+
+The following gates are mandatory in guided mode:
+
+1. **Brief gate**: confirm audience, language, duration, purpose, source of
+   truth, and output form.
+2. **Style gate**: show two or three suitable template candidates with cover
+   and content previews; wait for the user to choose one.
+3. **Outline gate**: present the talk thesis, section map, and slide budget;
+   wait for approval or revision.
+4. **Sample gate**: compile one or two representative frames and show the
+   result; wait for approval of typography, density, colors, and formula
+   treatment.
+
+Do not build the full deck before all four gates have been approved or
+explicitly skipped.
+
+For the first response:
+
+1. inspect the available source packet;
+2. report the source inventory, likely mathematical genre, and missing
+   evidence;
+3. ask only for missing brief-gate decisions;
+4. state the next checkpoint.
+
+Do not select a final template, write a full outline, or generate a full deck
+in the first response unless the user explicitly requests autonomous execution.
+
 ## Outputs
 
 - Beamer source tree, usually `main.tex` plus figures, bibliography, and local
@@ -54,8 +99,16 @@ needed evidence. Do not produce a full deck with unsupported claims.
 ## Template Selection
 
 Start from `templates/preview-gallery.md`, then confirm metadata in
-`templates/catalog.yaml`. Inspect both the cover and first-content preview and
-select the smallest template that matches the mathematical genre:
+`templates/catalog.yaml`. Inspect both the cover and first-content preview.
+Filter the catalog to two or three candidates and present each candidate with:
+
+- template name and preview paths;
+- visual character and mathematical genre fit;
+- strengths, density risks, language, and build engine;
+- a recommendation without silently making the final choice.
+
+Wait for the style-gate decision before drafting the outline. Select the
+smallest template that matches the mathematical genre:
 
 | Need | Template family |
 | --- | --- |
@@ -85,30 +138,59 @@ select the smallest template that matches the mathematical genre:
 Institutional or downloaded templates are references until their license,
 branding, personal data, and build status are checked.
 
-## Workflow
+## Guided Workflow
 
-1. Inspect the source packet and identify the mathematical genre: theorem,
-   proof, algorithm, computation, experiment, survey, lecture, defense, or
-   poster.
-2. Ask only for blocking choices: audience, language, duration, template,
-   authoritative source, build permission, and whether institutional branding
-   is allowed.
-3. Create a talk thesis, section map, and slide budget. Keep most talks to two
-   to four main sections unless the user requests a long lecture.
-4. Choose a template from `templates/catalog.yaml` and explain why it fits.
-5. Draft one or two representative frames before a full deck when the visual
-   direction or mathematical density is uncertain.
-6. Build the full deck from source-grounded claims. Preserve assumptions,
-   domains, quantifiers, theorem status, proof status, citations, and numeric
-   results.
-7. Write or update `slide-source-ledger.md` while drafting, not after the fact.
-8. Compile with the appropriate engine when approved:
+### Stage 0: Source Intake
+
+Inspect the source packet and identify the mathematical genre: theorem, proof,
+algorithm, computation, experiment, survey, lecture, defense, or poster.
+Separate confirmed sources from missing or conflicting evidence.
+
+### Stage 1: Brief Gate
+
+Confirm audience, language, duration or slide count, presentation purpose,
+authoritative source, output folder, build permission, and institutional
+branding constraints. Recommend sensible defaults, but wait for approval.
+
+### Stage 2: Style Gate
+
+Show two or three template candidates from the preview gallery. Explain the
+tradeoffs and wait for the user to select or revise the shortlist.
+
+### Stage 3: Outline Gate
+
+Create a talk thesis, section map, and slide budget. Keep most talks to two to
+four main sections unless the user requests a long lecture. Identify the role
+of each planned theorem, proof, algorithm, figure, or experiment frame. Wait
+for approval.
+
+### Stage 4: Sample Gate
+
+Draft and compile one or two representative frames. Prefer a content-dense
+mathematical frame over title-only samples. Show the rendered result and wait
+for approval of typography, density, colors, notation, and formula treatment.
+
+### Stage 5: Full Deck
+
+Build the full deck from source-grounded claims. Preserve assumptions, domains,
+quantifiers, theorem status, proof status, citations, and numeric results.
+Write or update `slide-source-ledger.md` while drafting, not after the fact.
+
+### Stage 6: Build And Audit
+
+Compile with the appropriate engine:
    - English default: `latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex`
    - Chinese or mixed CJK default:
      `latexmk -xelatex -interaction=nonstopmode -halt-on-error main.tex`
-9. Audit the log, PDF, references, citations, figures, fonts, overfull boxes,
-   navigation, and frame density.
-10. Return the deck, evidence, unresolved risks, and next revision options.
+
+Audit the log, PDF, references, citations, figures, fonts, overfull boxes,
+navigation, and frame density. Fix mechanical failures and report any change
+that could affect mathematical meaning.
+
+### Stage 7: Delivery
+
+Return the deck, evidence ledger, build report, unresolved risks, and focused
+revision options.
 
 ## Mathematical Coverage Rules
 

@@ -54,6 +54,12 @@ class MathBeamerSkillTests(unittest.TestCase):
             "PDEs",
             "slide-source-ledger.md",
             "latexmk",
+            "Guided Interaction Contract",
+            "Brief gate",
+            "Style gate",
+            "Outline gate",
+            "Sample gate",
+            "Do not build the full deck",
         ):
             with self.subTest(required=required):
                 self.assertIn(required, text)
@@ -112,6 +118,21 @@ class MathBeamerSkillTests(unittest.TestCase):
         )
         self.assertEqual(0, result.returncode, result.stderr)
         self.assertIn("usage:", result.stdout)
+
+    def test_guided_workflow_requires_user_checkpoints(self) -> None:
+        skill = (PACKAGE / "SKILL.md").read_text(encoding="utf-8")
+        readme = (PACKAGE / "README.md").read_text(encoding="utf-8")
+        readme_zh = (PACKAGE / "README.zh-CN.md").read_text(encoding="utf-8")
+        openai = (PACKAGE / "agents/openai.yaml").read_text(encoding="utf-8")
+
+        self.assertIn("Default to guided mode", skill)
+        self.assertIn("two or three suitable template candidates", skill)
+        self.assertIn("Do not select a final template", skill)
+        self.assertIn("The default interaction is guided", readme)
+        self.assertIn("The full deck starts only after", readme)
+        self.assertIn("默认采用逐步引导模式", readme_zh)
+        self.assertIn("完整 deck", readme_zh)
+        self.assertIn("Guide me step by step", openai)
 
 
 if __name__ == "__main__":
