@@ -30,6 +30,30 @@ externalizing TikZ, or changing system fonts.
 - Tables with more columns than the slide can support.
 - Backup slides counted as part of the main talk when they should not be.
 
+## Selected Template Comparison
+
+Use the recorded template source and previews, approved samples, and explicit
+style changes as the comparison reference.
+
+- Inspect the rendered cover and representative content pages, including dense
+  formula, theorem, and figure/table pages where present. For a single-page
+  poster, inspect that poster page. Check pages adjusted during overflow
+  repairs as well.
+- Compare cover alignment and metadata placement, font hierarchy, colors,
+  margins, frame titles, headline/footline, navigation, and block appearance.
+  Different wording and page counts are expected; the selected visual
+  framework must remain recognizable in each of these elements.
+- Inspect source changes for theme or font replacements and added overrides
+  such as `\setbeamertemplate`, `\setbeamerfont`, `\setbeamercolor`, custom
+  title frames, or local style definitions. Retaining `\usetheme` alone does
+  not show that its layout is still in use.
+- Restore unrequested changes and recompile before delivery. Do not replace
+  the comparison previews with the changed output to make a mismatch disappear.
+- Record the pages compared, differences found, and corrections in the
+  existing review report. Distinguish source inspection from rendered-PDF
+  inspection; if rendering is unavailable, report that the visual comparison
+  remains incomplete.
+
 ## Mathematical Meaning Risks
 
 - Removed assumptions.

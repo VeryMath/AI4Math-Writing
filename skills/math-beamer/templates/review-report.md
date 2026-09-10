@@ -37,6 +37,12 @@
 ## Template And Branding
 
 - Template:
+- Selected source and preview paths:
+- Explicitly requested style changes:
+- Rendered pages compared with the selected previews and approved samples:
+- Cover, typography, page structure, navigation, and block comparison:
+- Unrequested changes corrected or still unresolved:
+- Visual comparison completed or unavailable:
 - Third-party assets:
 - Institutional logos/colors:
 - License notes:

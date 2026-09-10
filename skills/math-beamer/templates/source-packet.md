@@ -34,6 +34,13 @@
 - Confidential material:
 - Do not include:
 
+## Selected Template
+
+- Template name and source path:
+- Selected cover and content previews:
+- Explicitly requested style changes (none by default):
+- Approved sample source and rendered pages:
+
 ## Approval Checkpoints
 
 - Template selection:

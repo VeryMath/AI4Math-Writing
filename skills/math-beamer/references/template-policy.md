@@ -10,6 +10,20 @@ Built-in templates must be:
 - explicit about package dependencies;
 - suitable for source-grounded mathematical content.
 
+## Using A Selected Template
+
+Follow `SKILL.md` under **Preserve The Selected Template** when adapting a
+template. The editable starter source is the basis for the deck. Preserve its
+visual framework while replacing example content; changing the framework
+requires a specific user request or an explicitly chosen redesign.
+
+For example, `seminar-minimal-zh` uses `Boadilla`, `seahorse`, and `\titlepage`.
+Fill in its title, author, institute, and date through the existing commands.
+Keep its centered cover, title treatment, navigation, and divided footline.
+A left-aligned title card with a new footer is a redesign, even when it uses
+the same lavender color. Put extra introductory content on a content frame
+when it does not fit the existing cover structure.
+
 ## Downloaded Templates
 
 Downloaded templates stay in the source index until review confirms:

@@ -66,9 +66,10 @@ The following gates are mandatory in guided mode:
    and content previews; wait for the user to choose one.
 3. **Outline gate**: present the talk thesis, section map, and slide budget;
    wait for approval or revision.
-4. **Sample gate**: compile one or two representative frames and show the
-   result; wait for approval of typography, density, colors, and formula
-   treatment.
+4. **Sample gate**: compile representative pages as described in Stage 4,
+   keeping the selected template's page types. Compare them with the selected
+   previews, then show the result for approval of typography, density, and
+   formula treatment within that template.
 
 Do not build the full deck before all four gates have been approved or
 explicitly skipped.
@@ -138,6 +139,43 @@ smallest template that matches the mathematical genre:
 Institutional or downloaded templates are references until their license,
 branding, personal data, and build status are checked.
 
+## Preserve The Selected Template
+
+The selected template defines the deck's layout as well as its colors. Apply
+these rules in guided mode, autonomous mode, and later revisions. Skipping a
+checkpoint does not discard an existing template choice.
+
+- Record the selected template name, source path, cover/content previews, and
+  explicitly requested style changes in the existing brief or source packet.
+  Reuse that choice when continuing the work.
+- Read the recorded template source and its local style files. For bundled
+  templates, the entry point is `templates/packs/<name>/main.tex`; for supplied
+  templates, use their actual entry point. Start the deck from those sources;
+  replace the title, author, date, sections, and frame contents while retaining
+  the template setup and layout commands. For an existing deck, continue from
+  its source and approved style changes.
+- Preserve the theme, color and font settings, aspect ratio, margins, cover
+  structure, frame-title treatment, headline, footline, navigation, and block
+  styles. Keep the existing title-page mechanism, such as `\titlepage`.
+  Content may use suitable text, formulas, figures, tables, or columns within
+  that framework. Matching the palette alone is not template reuse.
+- Treat requests to polish or improve layout as content adjustments within
+  the selected framework. Resolve overflow through shorter wording, formula
+  line breaks, or additional frames while preserving mathematical meaning.
+  Do not replace the cover, override template elements, or shrink global fonts
+  to make the content fit.
+- If the user explicitly requests a style change, apply that change and retain
+  the other template elements. If proposing a redesign, show the specific
+  change for the user's decision before applying it. General approval of an
+  outline or sample does not permit further template changes.
+- If the corresponding source is unavailable, state that limitation before
+  reconstructing a layout; do not describe a reconstruction as reuse of the
+  selected template.
+
+Compare rendered samples and the final deck with the selected previews and
+approved samples using `references/build-and-layout-audit.md`. Correct
+unrequested style changes before delivery.
+
 ## Guided Workflow
 
 ### Stage 0: Source Intake
@@ -156,6 +194,8 @@ branding constraints. Recommend sensible defaults, but wait for approval.
 
 Show two or three template candidates from the preview gallery. Explain the
 tradeoffs and wait for the user to select or revise the shortlist.
+If the user has already selected a template, carry that choice forward without
+asking them to select it again. Record it as described above.
 
 ### Stage 3: Outline Gate
 
@@ -166,14 +206,19 @@ for approval.
 
 ### Stage 4: Sample Gate
 
-Draft and compile one or two representative frames. Prefer a content-dense
-mathematical frame over title-only samples. Show the rendered result and wait
-for approval of typography, density, colors, notation, and formula treatment.
+Draft and compile at least one content-dense mathematical frame from the
+selected template's source, plus its cover with actual metadata when the
+template has a cover. For a single-page poster, use the compiled poster page.
+Compare the rendered pages with the selected previews before showing them.
+Keep the template's typography, colors, and page structure; review density,
+notation, and formula treatment within that layout. Wait for sample approval.
 
 ### Stage 5: Full Deck
 
-Build the full deck from source-grounded claims. Preserve assumptions, domains,
-quantifiers, theorem status, proof status, citations, and numeric results.
+Extend the approved sample source into the full deck, retaining the selected
+template and explicit style changes. Build from source-grounded claims.
+Preserve assumptions, domains, quantifiers, theorem status, proof status,
+citations, and numeric results.
 Write or update `slide-source-ledger.md` while drafting, not after the fact.
 
 ### Stage 6: Build And Audit
@@ -184,8 +229,10 @@ Compile with the appropriate engine:
      `latexmk -xelatex -interaction=nonstopmode -halt-on-error main.tex`
 
 Audit the log, PDF, references, citations, figures, fonts, overfull boxes,
-navigation, and frame density. Fix mechanical failures and report any change
-that could affect mathematical meaning.
+navigation, and frame density. Compare representative rendered pages with the
+selected template and approved samples, including the cover when present.
+Restore any unrequested template changes, including overrides introduced while
+fixing layout. Report any change that could affect mathematical meaning.
 
 ### Stage 7: Delivery
 
@@ -250,6 +297,8 @@ revision options.
   missing files, unresolved references/citations, and the smallest next fix.
 - Layout failure: identify overloaded frames, long formulas, overfull boxes,
   unreadable figures, and title/navigation collisions.
+- Template mismatch: restore the selected layout and explicit style changes,
+  recompile, and compare again. Do not present matching colors as compliance.
 - License or branding uncertainty: keep the template in the reference index and
   do not vendor it into public templates.
 

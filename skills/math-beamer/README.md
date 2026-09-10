@@ -84,6 +84,7 @@ Constraints:
 - inspect first;
 - use guided mode and stop at every checkpoint;
 - show two or three visual template candidates and wait for my choice;
+- build on the selected template source and preserve its visual framework;
 - wait for outline approval and compiled sample approval before the full deck;
 - ask before compiling or using institutional branding;
 - keep a slide-source ledger.
@@ -99,7 +100,7 @@ and stop at four mandatory checkpoints:
 | Brief | audience, language, duration, purpose, source, output | approve or revise the brief |
 | Style | two or three templates with cover and content previews | choose or revise the style |
 | Outline | talk thesis, section map, and slide budget | approve or revise the outline |
-| Sample | one or two compiled representative frames | approve or revise the visual direction |
+| Sample | compiled cover when present and representative content; the poster page for a poster | review content layout within the selected template |
 
 The full deck starts only after these gates are approved or explicitly
 skipped. Use the checkpoint responses:
@@ -123,6 +124,19 @@ Use guided mode. First inspect the source packet only. Then tell me:
 
 Do not choose the final template or generate the full outline yet.
 ```
+
+## After Template Selection
+
+The selected template defines the cover, typography, colors, page structure,
+navigation, and block styles. The agent fills its source with your content,
+then extends the approved samples into the full deck. Requests to polish the
+slides keep that framework; only explicitly requested or chosen style changes
+alter it. Existing choices also carry over to autonomous work and revisions.
+
+Samples and the final deck are compared with the selected previews. Content
+that does not fit is reworded, reflowed, or split across frames while preserving
+mathematical meaning. See **Preserve The Selected Template** in
+[`SKILL.md`](SKILL.md) for the full rules.
 
 ## Workflow And Outputs
 
