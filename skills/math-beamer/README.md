@@ -36,6 +36,11 @@ layout report, `slide-source-ledger.md`, and revision notes. It should also
 name the selected template, build engine, unresolved mathematical risks, and
 any license or branding constraints.
 
+By default, keep source attribution in `slide-source-ledger.md`. Do not add
+source lines, source footnotes, or repeated source bars at the bottom of each
+slide. Add visible source citations only when the user explicitly requests
+them, and keep the ledger complete in that case as well.
+
 ## Skill Entry Points
 
 The shared workflow lives in:

@@ -29,6 +29,10 @@ agent 应产出 Beamer source tree、可选 PDF、build/layout report、
 `slide-source-ledger.md` 和修订说明。报告中要写清模板选择、编译引擎、
 未解决的数学风险，以及授权或机构品牌限制。
 
+默认将来源统一记录在 `slide-source-ledger.md`，不在每页底部添加
+“来源：……”文字、来源脚注或统一来源栏。用户明确要求展示引用时，再添加
+页面引用，同时保留完整的来源记录。
+
 ## Skill 入口
 
 | 文件 | 用途 |

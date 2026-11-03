@@ -1,5 +1,9 @@
 # Slide Source Ledger
 
+Store source attribution here by default. Keep this ledger separate from the
+rendered slides; do not repeat its entries as per-slide source footers unless
+the user explicitly requests visible citations.
+
 | Slide | Claim / object | Source | Status | Risk | Notes |
 | --- | --- | --- | --- | --- | --- |
 | 1 | Title, authors, event | User-provided metadata | confirmed | low | Replace placeholders before release. |
