@@ -97,6 +97,19 @@ in the first response unless the user explicitly requests autonomous execution.
 - Revision notes that distinguish mathematical meaning risks from mechanical
   layout fixes.
 
+## Source Attribution
+
+- Keep all slide-to-source mappings in `slide-source-ledger.md`, including
+  theorem statements, formulas, figures, and numerical results.
+- By default, do not add `Source: ...` or `来源：……` lines at the bottom of
+  each slide, source footnotes, or repeated source bars. Do not turn ledger
+  entries into visible slide text.
+- Treat source placeholders in starter templates as prompts for the ledger;
+  omit those placeholders from the rendered slides. Preserve the template's
+  title, author, and page-number footer without adding source text.
+- Add visible source citations only when the user explicitly requests them.
+  Keep the ledger complete when visible citations are requested as well.
+
 ## Template Selection
 
 Start from `templates/preview-gallery.md`, then confirm metadata in
@@ -220,6 +233,7 @@ template and explicit style changes. Build from source-grounded claims.
 Preserve assumptions, domains, quantifiers, theorem status, proof status,
 citations, and numeric results.
 Write or update `slide-source-ledger.md` while drafting, not after the fact.
+Apply the **Source Attribution** defaults when deciding what appears on slides.
 
 ### Stage 6: Build And Audit
 

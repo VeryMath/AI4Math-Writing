@@ -26,6 +26,8 @@ externalizing TikZ, or changing system fonts.
 - Overfull boxes, especially formulas and tables.
 - Dense frames with too many bullets or proof steps.
 - Frame titles that collide with navigation.
+- Source lines, source footnotes, or repeated source bars added at slide
+  bottoms without an explicit user request.
 - Figures with unreadable labels or legends.
 - Tables with more columns than the slide can support.
 - Backup slides counted as part of the main talk when they should not be.
