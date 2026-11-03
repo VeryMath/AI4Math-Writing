@@ -52,7 +52,7 @@ agent 应产出 Beamer source tree、可选 PDF、build/layout report、
 
 仓库：https://github.com/VeryMath/AI4Math-Writing.git
 分支：main
-Skill 路径：math-beamer
+Skill 路径：skills/math-beamer
 
 请读取包内 README 和 SKILL.md，安装包含 SKILL.md 的目录，验证 `$math-beamer`
 是否可发现，并告诉我是否需要重启 agent。
